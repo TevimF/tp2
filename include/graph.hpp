@@ -1,8 +1,11 @@
-#ifndef GRAPH_H
-#define GRAPH_H
+#ifndef GRAPH_HPP
+#define GRAPH_HPP
 
 #include <iostream>
 #include <cmath>
+#include "../src/hash.cpp"
+
+const int VECTOR_SIZE = 100;
 
 // ponto
 struct Vertex{
@@ -13,6 +16,7 @@ struct Vertex{
 struct Edge{
   Vertex v1;
   Vertex v2;
+  float size;
 };
 // grafo
 class Graph{
@@ -32,4 +36,4 @@ class Graph{
     int edgeCount;
 };
 
-#endif // GRAPH_H
+#endif // GRAPH_HPP
