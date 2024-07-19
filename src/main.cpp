@@ -1,9 +1,14 @@
 #include <iostream>
-#include "main.hpp"
+#include "../include/main.hpp"
 #include "graph.hpp"
-#include "hash.cpp"
+
+using namespace std;
 
 int main() {
-  
+  int a, b, c;
+  cin >> a >> b >> c;
+  for (int i = 0; i < a; i++){
+    cin >> 
+  }
   
 }

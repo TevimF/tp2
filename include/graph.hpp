@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <cmath>
-#include "../src/hash.cpp"
 
 const int VECTOR_SIZE = 100;
 
