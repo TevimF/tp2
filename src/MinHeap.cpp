@@ -62,3 +62,6 @@ void MinHeap::print() {
     }
     cout << endl;
 }
+int MinHeap::getSize() {
+    return size;
+}

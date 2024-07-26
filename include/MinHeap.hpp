@@ -15,14 +15,16 @@ public:
     ~MinHeap();
     // Insert
     void insert(int data);
-    // Heapify Up
+    // Empilhar
     void heapifyUp(int index);
-    // Extract Min
+    // Pegar o menor valor
     int extractMin();
-    // Heapify Down
+    // Desempilhar
     void heapifyDown(int index);
     // Print
     void print();
+    // Size
+    int getSize();
 };
 
 #endif // MINHEAP_HPP

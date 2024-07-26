@@ -3,26 +3,23 @@
 
 #include <iostream>
 #include "MinHeap.hpp"
-
-using namespace std;
+#include <utility> // For std::pair
 
 class PriorityQueue {
-    int* arr;
+    std::pair<int, float>* arr; // Array of (node, priority)
     int capacity;
     int size;
 public:
-    // Constructor
     PriorityQueue(int capacidade);
-    // Destructor
     ~PriorityQueue();
-    // Insert
-    void insert(int data);
-    // Heapify Up
+    void insert(int node, float priority);
+    int extractMin();
     void heapifyUp(int index);
-    // Extract Max
-    int extractMax();
-    // Heapify Down
     void heapifyDown(int index);
+    int getSize();
+    int parent(int index);
+    int leftChild(int index);
+    int rightChild(int index);
 };
 
 #endif  // PRIORITYQUEUE_HPP

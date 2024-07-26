@@ -5,12 +5,6 @@
 #include <iostream>
 
 using namespace std;
-struct coord {
-    int x, y;
-};
-float distance(int x1, int y1, int x2, int y2) {
-    return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
-}
 
 
 int main() {
@@ -40,6 +34,7 @@ int main() {
     }
 
     cin >> s_energia >> q_passes;
+    grafo.setPasses(q_passes);
 
     // debug: 
     /*
@@ -48,6 +43,22 @@ int main() {
     printf("\nPasses: %d", q_passes);
     cout << endl;
     */
+   float menor_caminho_dijkl = grafo.dijkstra_list(0, n_clareiras - 1);
+   if (menor_caminho_dijkl <= s_energia || menor_caminho_dijkl == -1) {
+        cout << "1 ";
+   } else {
+        cout << "0 ";
+   }
+float menor_caminho_a_star = grafo.a_star(0, n_clareiras - 1, clareiras);
+    if (menor_caminho_a_star <= s_energia) {
+        cout << "1";
+    } else {
+        cout << "0";
+    }
+   
+
+    return 0;
+   
     
 
 }
